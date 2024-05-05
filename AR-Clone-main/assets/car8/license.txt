@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kaze´s CLK 500 NFSMW
+* source:	https://sketchfab.com/3d-models/kaze-s-clk-500-nfsmw-bcc4034c60ed4c31872815e7a1bbd4ff
+* author:	memoov (https://sketchfab.com/movartD)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kaze´s CLK 500 NFSMW" (https://sketchfab.com/3d-models/kaze-s-clk-500-nfsmw-bcc4034c60ed4c31872815e7a1bbd4ff) by memoov (https://sketchfab.com/movartD) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,157 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- Correcting zooming issue -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Library untuk VR membangun 3D -->
+    <script src="./js/aframe/aframe.min.js"></script>
+    <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+    <script src="./js/arjs/aframe-ar.js"></script>
+    <title>WebAR: Multiple Marker</title>
+    <!-- include text geometry -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;">
+
+        <!-- create assets -->
+        <a-assets timeout="900000">
+            <a-asset-item id="drone" src="./assets/busterDrone/busterDrone.gltf"></a-asset-item>
+            <a-asset-item id="cookie" src="./assets/cookie5/cookie5.gltf"></a-asset-item>
+            <a-asset-item id="car1" src="./assets/car1/scene.gltf"></a-asset-item>
+            <a-asset-item id="car2" src="./assets/car2/scene.gltf"></a-asset-item>
+            <a-asset-item id="car3" src="./assets/car3/scene.gltf"></a-asset-item>
+            <a-asset-item id="car4" src="./assets/car4/scene.gltf"></a-asset-item>
+            <a-asset-item id="car5" src="./assets/car5/scene.gltf"></a-asset-item>
+            <a-asset-item id="car6" src="./assets/car6/scene.gltf"></a-asset-item>
+            <a-asset-item id="car7" src="./assets/car7/scene.gltf"></a-asset-item>
+            <a-asset-item id="car8" src="./assets/car8/scene.gltf"></a-asset-item>
+            <a-asset-item id="car9" src="./assets/car9/scene.gltf"></a-asset-item>
+            <a-asset-item id="car10" src="./assets/car10/scene.gltf"></a-asset-item>
+            <img id="bougenville" src="./images/photo/bougenville.jpg">
+            <img id="kio" src="./images/photo/kio.jpg">
+            <img id="mahasiswa" src="./images/photo/mahasiswa.jpg">
+            <img id="airterjun" src="./images/photo/wisata-air-terjun.jpg">
+        </a-assets>
+        <!-- handle unknown marker -->
+        <a-marker type="unknown">
+            <a-box depth="1" height="1" width="1" position="0 0.5 0" material="opacity: 0.5; side:double; color:purple;"></a-box>
+        </a-marker>
+
+        handle hiro marker
+        <a-marker preset="hiro">
+            <a-entity gltf-model="#drone" animation-mixer></a-entity>
+        </a-marker>
+
+        <!-- handle kanji marker -->
+        <a-marker preset="kanji">
+            <a-entity gltf-model="#cookie"></a-entity>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="-">
+            <a-box position="0 0.5 0" material="opacity: 0.5; side: double;color:red;">
+                <a-torus-knot radius="0.26" radius-tubular="0.05"></a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="0">
+            <a-gltf-model src="#car1" rotation="-90 0 0" position="0.05 0.05 1" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="1">
+                <a-gltf-model src="#car2" rotation="-90 0 0" position="0 0 0" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="2">
+                <a-gltf-model src="#car3" rotation="-90 0 0" position="0.05 0.05 0.05" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="3">
+                <a-gltf-model src="#car4" rotation="-90 0 0" position="0 -0.2 0.2" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="4">
+                <a-gltf-model src="#car5" rotation="-90 0 0" position="0 -0.2 0.2"  scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="5">
+                <a-gltf-model src="#car6" rotation="-90 0 0" position="0 -0.2 0.2" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="6">
+                <a-gltf-model src="#car7" rotation="-90 0 0" position="0.05 0.05 0.05" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="7">
+                <a-gltf-model src="#car8" rotation="-90 0 0" position="0.5 0.05 0.05" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="8">
+                <a-gltf-model src="#car9" rotation="-90 0 0" position="0.05 0.05 0.05" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="9">
+                <a-gltf-model src="#car10" rotation="-90 0 0" position="0.05 0.05 0.05" scale="1 1 1"></a-gltf-model>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="-">
+            <a-image src="#bougenville" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-image>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="-">
+            <a-image src="#kio" rotation="-90 0 0" width="2" height="1"></a-image>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="-">
+            <a-plane width="1" height="1" position="0 0 0" rotation="-90 0 0" color="white" src="#mahasiswa">
+                <a-text value="Bunga" color="#111" position="0 -0.7 0" align="center"></a-text>
+                <a-sphere color="blue" position="-0.7 -0.7 0" radius="0.2"></a-sphere>
+                <a-sphere color="red" position="0.7 -0.7 0" radius="0.2"></a-sphere>
+            </a-plane>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="-">
+            <a-plane width="1" height="1" position="0 0 0" rotation="-90 0 0" color="white" src="#airterjun">
+                <a-torus-knot radius="0.06" radius-tubular="0.05" position="0.7 -0.7 0">
+                </a-torus-knot>
+                <a-torus-knot radius="0.06" radius-tubular="0.05" position="-0.7 -0.7 0">
+                </a-torus-knot>
+            </a-plane>
+        </a-marker>
+
+        <!-- handle custom marker -->
+        <a-marker preset="custom" type="pattern" url="./marker/datamatrix-1234567890/marker-datamatrix-1234567890.patt">
+            <a-image src="#kio" rotation="-90 0 0" width="1" height="1" position="-1 0 -1"></a-image>
+        </a-marker>
+
+        <!-- handle custom marker -->
+        <a-marker preset="custom" type="pattern" url="./marker/unila/pattern-Unila-warna.patt">
+            <a-image src="#airterjun" rotation="-90 0 0" width="1" height="1" position="-1 0 -1"></a-image>
+        </a-marker>
+
+        <!-- add a simple camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
